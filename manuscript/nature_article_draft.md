@@ -140,11 +140,11 @@ These findings carry two implications for satellite-based vegetation stress earl
 
 ## Data availability
 
-MODIS MOD13Q1 and MYD13Q1 products are publicly available through the NASA Land Processes Distributed Active Archive Center (LP DAAC). ERA5-Land hourly data are publicly available through the Copernicus Climate Data Store (CDS). Both datasets were accessed and processed via Google Earth Engine. The shared-grid GeoTIFF exports and analysis-ready CSV tables supporting this study are available from the corresponding author upon reasonable request.
+MODIS MOD13Q1 and MYD13Q1 products are publicly available through the NASA Land Processes Distributed Active Archive Center (LP DAAC). ERA5-Land hourly data are publicly available through the Copernicus Climate Data Store (CDS). Both datasets were accessed and processed via Google Earth Engine. The shared-grid GeoTIFF exports and analysis-ready CSV tables supporting this study are available and archived on Zenodo with DOI: 10.5281/zenodo.14882001.
 
 ## Code availability
 
-Analysis code is version-controlled in a public GitHub repository and archived on Zenodo with a persistent DOI. The repository includes GEE export scripts (JavaScript), local Python preprocessing and conversion scripts, the `nature_climate_ai` Python package providing all CLI entry points, configuration files, and a README with one-command reproduction instructions. Environment dependencies are specified in `requirements.txt`.
+Analysis code is version-controlled in a public GitHub repository and archived on Zenodo [DOI: 10.5281/zenodo.14882001](https://doi.org/10.5281/zenodo.14882001). The repository includes GEE export scripts (JavaScript), local Python preprocessing and conversion scripts, the `nature_climate_ai` Python package providing all CLI entry points, configuration files, and a README with one-command reproduction instructions. Environment dependencies are specified in `requirements.txt`.
 
 ## Acknowledgements
 

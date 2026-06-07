@@ -1,4 +1,6 @@
-﻿# nature-climate-ai: Interpretable Climate Precursor Discovery for Vegetation Stress across Australia
+﻿[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14882001.svg)](https://doi.org/10.5281/zenodo.14882001)
+
+# nature-climate-ai: Interpretable Climate Precursor Discovery for Vegetation Stress across Australia
 
 ## English
 

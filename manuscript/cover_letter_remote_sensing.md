@@ -28,4 +28,4 @@ Zhuoxian Wu
 Guangdong Neusoft Institute of Technology
 Email: wum2371@gmail.com
 GitHub: https://github.com/WUMIKE233/nature-climate-ai
-Release DOI: (pending Zenodo archiving)
+Release DOI: 10.5281/zenodo.14882001
