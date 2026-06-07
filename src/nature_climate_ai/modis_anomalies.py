@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
@@ -35,8 +35,11 @@ def compute_modis_anomalies(
     ndvi_col: str = "ndvi",
     quality_col: str = "quality_ok",
     min_climatology_samples: int = 2,
+    climatology_years: tuple[int, ...] | None = None,
 ) -> ModisAnomalyResult:
     """Compute day-of-year vegetation-index anomalies by stable spatial unit.
+
+    If *climatology_years* is provided, only those years are used for computing the pixel x DOY climatology reference. Anomalies are still computed for all rows.
 
     This function assumes the source table has already been harmonized to a
     consistent compositing cadence and spatial unit. If ``quality_ok`` exists,
@@ -57,11 +60,22 @@ def compute_modis_anomalies(
 
     valid = working.dropna(subset=[date_col, unit_col, evi_col, ndvi_col]).copy()
     valid["day_of_year"] = valid[date_col].dt.dayofyear
+    valid["_year"] = valid[date_col].dt.year
 
-    grouped = valid.groupby([unit_col, "day_of_year"], sort=False)
-    valid["evi_climatology"] = grouped[evi_col].transform("mean")
-    valid["ndvi_climatology"] = grouped[ndvi_col].transform("mean")
-    valid["climatology_samples"] = grouped[evi_col].transform("count")
+    if climatology_years is not None:
+        climo_mask = valid["_year"].isin(climatology_years)
+    else:
+        climo_mask = pd.Series(True, index=valid.index)
+
+    climo_subset = valid[climo_mask]
+    grouped = climo_subset.groupby([unit_col, "day_of_year"], sort=False)
+    climo_stats = pd.DataFrame({
+        "evi_climatology": grouped[evi_col].mean(),
+        "ndvi_climatology": grouped[ndvi_col].mean(),
+        "climatology_samples": grouped[evi_col].count(),
+    }).reset_index()
+
+    valid = valid.merge(climo_stats, on=[unit_col, "day_of_year"], how="inner")
     valid = valid[valid["climatology_samples"] >= min_climatology_samples].copy()
 
     valid["evi_anomaly"] = valid[evi_col] - valid["evi_climatology"]
@@ -151,6 +165,7 @@ def run_modis_anomaly_command(
     output_path: str | Path,
     report_path: str | Path,
     min_climatology_samples: int = 2,
+    climatology_years: tuple[int, ...] | None = None,
 ) -> tuple[bool, Path]:
     input_file = Path(input_path)
     output_file = Path(output_path)

@@ -834,6 +834,7 @@ def build_parser() -> argparse.ArgumentParser:
     anomalies.add_argument("--input", default="data/interim/modis_quality_filtered.csv")
     anomalies.add_argument("--output", default="data/processed/modis_anomalies.csv")
     anomalies.add_argument("--report", default="results/qc/modis_anomaly_qc_report.md")
+    anomalies.add_argument("--climatology-yrs", default=None, help="Comma-separated years for climatology (e.g. 2000,2018). Default: all years.")
     anomalies.add_argument("--min-climatology-samples", type=int, default=2)
     anomalies.set_defaults(func=modis_anomalies)
 
