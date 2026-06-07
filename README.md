@@ -120,7 +120,7 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### Submission maturity
 
-Phase 1 complete and submission-ready for *Ecological Indicators* (Elsevier). All placeholders cleared. Manuscript, figures, cover letter, and submission checklist are available in `manuscript/`. Submit via [Elsevier Editorial Manager](https://www.editorialmanager.com/ecolind/).
+Phase 1 complete and **submitted** to *Ecological Indicators* (Elsevier). Manuscript: ECOIND-D-26-01217 (2026-06-08). All placeholders cleared. Manuscript, figures, cover letter, and submission checklist are available in `manuscript/`. Submit via [Elsevier Editorial Manager](https://www.editorialmanager.com/ecolind/).
 
 ## 中文
 
@@ -240,4 +240,4 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### 当前投稿成熟度
 
-第一阶段已完成，具备投稿条件。所有占位符已清除。稿件、图表、投稿信、投稿检查清单均位于 `manuscript/`。通过 [Elsevier Editorial Manager](https://www.editorialmanager.com/ecolind/) 提交。
+第一阶段已完成，已投稿至 *Ecological Indicators* (Elsevier)。Manuscript: ECOIND-D-26-01217 (2026-06-08)。所有占位符已清除。稿件、图表、投稿信、投稿检查清单均位于 `manuscript/`。通过 [Elsevier Editorial Manager](https://www.editorialmanager.com/ecolind/) 提交。

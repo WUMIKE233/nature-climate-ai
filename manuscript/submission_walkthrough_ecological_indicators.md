@@ -1,7 +1,7 @@
 # Ecological Indicators (Elsevier) Submission Walkthrough
 
 > ????: Ecological Indicators (Elsevier) | ????: Subscription (? APC)
-> ??: v3-revised | ??: 2026-06-08
+> ??: v3-revised | ??: 2026-06-08 | **???** Manuscript: ECOIND-D-26-01217
 
 ---
 
