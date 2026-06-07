@@ -1,10 +1,10 @@
-# Nature-ready AI for climate/ecology manuscript package
+﻿# nature-climate-ai: Interpretable Climate Precursor Discovery for Vegetation Stress across Australia
 
 ## English
 
-This workspace prepares a Nature-first research package around the working thesis:
+This workspace contains a complete, reproducible research package for discovering climate precursors of satellite-observed vegetation stress across Australia. Target journal: *Remote Sensing* (MDPI), Phase 1 regional-scale SCI paper.
 
-**AI-guided discovery of climate precursors and compound heat-drought mechanisms that predict ecosystem vegetation stress at global scale.**
+**Phase 1: Regional-scale ecological remote sensing research — MODIS (MOD13Q1/MYD13Q1) + ERA5-Land on unified 0.25° grid, 2000–2025, Australia.**
 
 The package is intentionally evidence-gated. Draft manuscript claims use `RESULT_REQUIRED` placeholders until the analysis pipeline produces validated results.
 
@@ -114,17 +114,17 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### Current status
 
-This is a manuscript and analysis scaffold, not a completed Nature submission. The next scientific step is to acquire data, run the stress-event and precursor-discovery workflow, validate temporal and spatial generalization, then promote only verified findings into the manuscript.
+**Phase 1 complete**: Full analysis pipeline executed, 6 manuscript figures generated, GitHub repository public (v0.1.0), manuscript draft ready for submission to *Remote Sensing* (MDPI). The next scientific step is to acquire data, run the stress-event and precursor-discovery workflow, validate temporal and spatial generalization, then promote only verified findings into the manuscript.
 
 ### Submission maturity
 
-This project is currently in the research-design and evidence-generation stage for a Nature/Science-targeted manuscript, not the final submission stage. Before any `RESULT_REQUIRED` placeholder can be replaced, the project must complete a minimum evidence chain: public-data access, vegetation-stress event catalogue, temporal and spatial validation, compound-interaction ablations, robustness/falsification checks, independent ecosystem validation and reproducibility records. The recommended next milestone is a minimum publishable evidence slice that can produce pilot stress-event, precursor-pathway and predictive-validation figures.
+This project is in Phase 1: a complete regional-scale analysis targeting *Remote Sensing* (MDPI) or equivalent ecological remote sensing / environmental data science journal, not the final submission stage. Before any `RESULT_REQUIRED` placeholder can be replaced, the project must complete a minimum evidence chain: public-data access, vegetation-stress event catalogue, temporal and spatial validation, compound-interaction ablations, robustness/falsification checks, independent ecosystem validation and reproducibility records. The recommended next milestone is a minimum publishable evidence slice that can produce pilot stress-event, precursor-pathway and predictive-validation figures.
 
 ## 中文
 
-本工作区用于准备一套以 Nature 为优先目标、Science 作为备选定位的气候/生态 AI 研究投稿包，当前工作假设为：
+本工作区包含一套完整的可复现研究包，用于发现澳大利亚卫星植被胁迫的气候前兆。投稿目标期刊：*Remote Sensing* (MDPI)，第一阶段定位为区域尺度 SCI 论文。、Science 作为备选定位的气候/生态 AI 研究投稿包，当前工作假设为：
 
-**利用 AI 在全球尺度发现气候前兆和复合高温-干旱机制，用于预测生态系统植被胁迫。**
+****第一阶段：区域尺度生态遥感研究 — MODIS + ERA5-Land，统一 0.25° 网格，2000–2025 年，澳大利亚。****
 
 本项目采用“证据门控”原则。主稿中的科学结论在数据分析和验证完成前保留 `RESULT_REQUIRED` 占位符，避免把尚未产生的结果写成事实。
 
@@ -234,8 +234,8 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### 当前状态
 
-这是一套论文与分析项目框架，并不是已经完成的 Nature 投稿。下一步科学工作是获取数据、运行植被胁迫事件与气候前兆发现流程、验证时间与空间泛化能力，然后只把经过验证的发现写入主稿。
+**第一阶段已完成**：全部分析管道已执行，6 张稿件图表已生成，GitHub 仓库已公开 (v0.1.0)，稿件初稿准备投稿到 *Remote Sensing* (MDPI)。下一步科学工作是获取数据、运行植被胁迫事件与气候前兆发现流程、验证时间与空间泛化能力，然后只把经过验证的发现写入主稿。
 
 ### 当前投稿成熟度
 
-本项目当前处于 Nature/Science 目标论文的研究设计与证据生成阶段，而非最终投稿阶段。在正式替换 `RESULT_REQUIRED` 占位符之前，必须完成最低证据链：公共数据访问、植被胁迫事件目录、时间与空间验证、复合机制消融、稳健性/证伪测试、独立生态系统验证和可复现记录。建议下一里程碑是先完成最小可验证结果切片，产出 pilot 级的胁迫事件图、前兆通路图和预测验证图。
+本项目当前处于第一阶段：已完成区域尺度分析，目标 *Remote Sensing* (MDPI) 或同等级生态遥感 / 环境数据科学 SCI 期刊，而非最终投稿阶段。在正式替换 `RESULT_REQUIRED` 占位符之前，必须完成最低证据链：公共数据访问、植被胁迫事件目录、时间与空间验证、复合机制消融、稳健性/证伪测试、独立生态系统验证和可复现记录。建议下一里程碑是先完成最小可验证结果切片，产出 pilot 级的胁迫事件图、前兆通路图和预测验证图。

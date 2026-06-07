@@ -58,7 +58,7 @@ Several limitations should be considered. Our analysis is restricted to the Aust
 
 The broader contribution of this work is the reproducible, grid-aligned methodology rather than any single precursor claim. By requiring that MODIS and ERA5 data share one pixel grid before analysis proceeds, we eliminate a subtle but pervasive source of spatial misalignment. The full analysis pipeline—from GEE data export through quality filtering, anomaly computation, feature construction, baseline comparison, validation and readiness assessment—is version-controlled and designed to be re-run with different spatial domains, anomaly thresholds or model configurations. The core finding is not that VPD or soil moisture precede vegetation stress (which is ecologically expected) but rather that climate-only precursors, while capturing a majority of stress events, generate unacceptably high false-alarm rates for operational early warning. This finding refocuses attention toward the integration of vegetation-memory, land-cover and ecological-context information as necessary complements to climate-based precursors.
 
-### Methods
+### Materials and Methods
 
 #### Data sources and shared-grid preprocessing
 
@@ -96,8 +96,16 @@ A shuffled-lag placebo test randomly permuted the lag assignments of climate fea
 
 AI-assisted coding and language tools (OpenAI Codex, GPT-5) were used to support code refactoring, pipeline automation and manuscript editing. All scientific analyses, methodological decisions, result interpretation and final text were verified and approved by the author. No AI-generated content was included without human review.
 
+
+**Keywords**: MODIS; ERA5-Land; vegetation index; climate precursor; vapour pressure deficit; soil moisture; early warning; Australia; spatial grid alignment; false alarm ratio
 ---
 
+
+## Conclusions
+
+This study presents a reproducible, grid-aligned framework for discovering climate precursors of satellite-observed vegetation stress across Australia. Using 26 years of MODIS EVI anomalies and ERA5-Land climate reanalysis on a unified 0.25° grid, we demonstrate that soil-moisture deficit and VPD excess at 16–32 day lead times are the dominant precursor signals. However, single-variable climate thresholds generate false-alarm ratios exceeding 0.94 and negative skill scores relative to the majority-class baseline—only the persistence of a previous stress event achieves a positive skill score (0.319). Spatial transfer of precursor signals across 20 grid-defined regions is modest, with region-level precision rarely exceeding 0.12 for the best-performing VPD precursor.
+
+These findings carry two implications for satellite-based vegetation stress early warning. First, any proposed climate-based early-warning system must be evaluated against a simple persistence baseline to demonstrate added value beyond temporal autocorrelation. Second, climate-only precursors, while useful for identifying elevated risk conditions, are insufficient for precise stress-event prediction without integrating vegetation-memory, land-cover type, soil properties, and other ecological-context information. The shared-grid methodology and publicly archived analysis pipeline provide a transferable template for extending this framework to other regions, biomes, and satellite data products.
 ## References
 
 1. Reichstein, M. et al. Deep learning and process understanding for data-driven Earth system science. *Nature* **566**, 195–204 (2019). DOI: 10.1038/s41586-019-0912-1.
