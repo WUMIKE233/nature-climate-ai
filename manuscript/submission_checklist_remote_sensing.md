@@ -1,6 +1,6 @@
 ﻿# Remote Sensing (MDPI) Submission Checklist / 投稿检查清单
 
-> 更新时间: 2026-06-08 | 目标期刊: Remote Sensing (MDPI)
+> 更新时间: 2026-06-08 | **已投稿: remotesensing-3667717** | 目标期刊: Remote Sensing (MDPI)
 
 ## 投稿前检查 / Pre-submission Check
 
