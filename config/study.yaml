@@ -1,0 +1,98 @@
+project:
+  working_title: "AI-guided discovery of climate precursors for global vegetation stress"
+  target_journal: "Nature"
+  evidence_policy: "Do not convert RESULT_REQUIRED placeholders into claims until validation artifacts exist."
+
+spatial_domain:
+  scope: "global vegetated land"
+  working_grid_degrees: 0.25
+  excluded_masks:
+    - permanent_water
+    - permanent_ice
+    - sparse_or_nonvegetated_pixels
+
+temporal_domain:
+  modis_years: [2001, 2025]
+  era5_years: [2000, 2025]
+  lead_time_days: [16, 32, 48, 64]
+
+data_sources:
+  era5:
+    provider: "Copernicus Climate Data Store"
+    source_url: "https://climate.copernicus.eu/climate-reanalysis"
+    variables:
+      - "2m_temperature"
+      - "total_precipitation"
+      - "soil_moisture"
+      - "surface_net_solar_radiation"
+      - "vapour_pressure_deficit"
+    access_status: "GEE_EXPORT_PRESENT_GRID_ALIGNMENT_BLOCKED"
+  modis:
+    provider: "NASA MODIS"
+    source_url: "https://modis.gsfc.nasa.gov/data/dataprod/mod13.php"
+    products:
+      - "MOD13Q1"
+      - "MYD13Q1"
+    indices:
+      - "NDVI"
+      - "EVI"
+    quality_filters:
+      - "cloud"
+      - "aerosol"
+      - "snow_ice"
+      - "view_angle"
+    access_status: "GEE_EXPORT_PRESENT_GRID_ALIGNMENT_BLOCKED"
+  fluxnet:
+    provider: "FLUXNET"
+    source_url: "https://fluxnet.org/data/fluxnet2015-dataset/"
+    variables:
+      - "GPP_NT_VUT_REF"
+      - "LE_F_MDS"
+      - "TA_F"
+      - "SW_IN_F"
+      - "VPD_F"
+    access_status: "SELECTED_ARCHIVES_DOWNLOADED_PARTIAL_READABILITY"
+
+stress_event_definition:
+  primary_signal: "EVI anomaly"
+  secondary_signal: "NDVI anomaly"
+  anomaly_baseline: "pixel-wise day-of-year climatology after quality filtering"
+  threshold_percentile: 10
+  minimum_duration_composites: 2
+  compound_driver_candidates:
+    - "temperature anomaly"
+    - "precipitation deficit"
+    - "soil moisture deficit"
+    - "vapour pressure deficit anomaly"
+
+modeling:
+  discovery_model:
+    family: "interpretable spatiotemporal neural or tree-based model"
+    default_baseline: "gradient boosting with lagged climate features"
+    interpretation_methods:
+      - "permutation importance"
+      - "SHAP or feature attribution"
+      - "lag-response maps"
+  baselines:
+    - "climatology"
+    - "linear/logistic regression"
+    - "standard drought and heat indices"
+    - "random forest or gradient boosting"
+
+validation:
+  temporal_holdout_years: [2021, 2025]
+  spatial_holdout: "leave-one-biome-or-continent-out"
+  statistical_checks:
+    - "block bootstrap confidence intervals"
+    - "permutation tests"
+    - "false discovery rate control"
+    - "sensitivity to stress threshold"
+  external_validation:
+    source: "FLUXNET"
+    target: "site-level GPP or latent heat anomalies during predicted stress windows"
+
+outputs:
+  manuscript: "manuscript/nature_article_draft.md"
+  chinese_notes: "manuscript/chinese_review_notes.md"
+  figure_plan: "figures/figure_plan.md"
+  submission_checklist: "manuscript/submission_checklist.md"

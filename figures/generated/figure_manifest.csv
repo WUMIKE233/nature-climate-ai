@@ -1,0 +1,7 @@
+number,title,evidence_required,output_path,status
+Fig. 1,Global study design and data/model pipeline,data coverage and workflow outputs,figures/generated/fig1_workflow.svg,schematic_ready
+Fig. 2,Discovered climate precursor patterns and regions,validated attribution maps,figures/generated/fig2_precursors.png,result_required
+Fig. 3,Prediction and attribution validation versus baselines,holdout metrics and uncertainty,figures/generated/fig3_validation.png,result_required
+Fig. 4,Ecosystem validation and mechanism interpretation,FLUXNET site-level agreement,figures/generated/fig4_fluxnet.png,result_required
+Extended Data Fig. 1,Robustness to event definitions,threshold sensitivity analysis,figures/generated/extended_data_fig1_sensitivity.png,result_required
+Extended Data Fig. 2,Transfer across biomes or continents,spatial holdout analysis,figures/generated/extended_data_fig2_transfer.png,result_required

@@ -1,0 +1,26 @@
+﻿status: CONFIRMED_BY_AUTHOR
+corresponding_author:
+  name: 吴卓宪
+  email: wum2371@gmail.com
+  affiliation: 广东东软学院NUIT
+authors:
+  - name: 吴卓宪
+    affiliation: 广东东软学院NUIT
+    contribution: "Conceptualization, Data curation, Formal analysis, Methodology, Software, Writing \u2013 original draft, Writing \u2013 review & editing"
+contributions:
+  conceptualization: 吴卓宪
+  data_curation: 吴卓宪
+  formal_analysis: 吴卓宪
+  methodology: 吴卓宪
+  software: 吴卓宪
+  writing_original_draft: 吴卓宪
+  writing_review_editing: 吴卓宪
+acknowledgements: "The author gratefully acknowledges the following data providers and platforms. MODIS vegetation index products (MOD13Q1 v061, MYD13Q1 v061) were obtained from the NASA Land Processes Distributed Active Archive Center (LP DAAC) and accessed via Google Earth Engine. ERA5-Land hourly climate reanalysis data were provided by the European Centre for Medium-Range Weather Forecasts (ECMWF) through the Copernicus Climate Data Store (CDS) and processed on Google Earth Engine. FLUXNET eddy covariance data were provided by the FLUXNET community through the FLUXNET2015 dataset. Google Earth Engine (Gorelick et al., 2017, Remote Sensing of Environment) provided the cloud computing platform for satellite data export and preprocessing. OpenAI Codex assisted with code development, pipeline automation, and manuscript preparation. The author is solely responsible for all scientific content, analysis decisions, and any errors."
+funding: None
+competing_interests: "The author declares no competing interests."
+data_policy_confirmed_by: 吴卓宪
+submission_approval:
+  all_authors_approved: true
+  not_under_consideration_elsewhere: true
+中文审阅说明: "本文件用于收集作者、单位、贡献、致谢、资助、利益冲突和投稿确认信息。正式投稿前必须由作者人工确认。"
+

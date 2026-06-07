@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nature-climate-ai"
+version = "0.1.0"
+description = "Evidence-gated scaffold for a Nature-ready AI for climate/ecology manuscript."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+  "cdsapi>=0.7",
+  "xarray>=2024.1",
+]
+
+[project.optional-dependencies]
+science = [
+  "dask[array]>=2024.1",
+  "zarr>=2.16",
+  "netCDF4>=1.6",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "earthaccess>=0.12",
+]
+dev = [
+  "pytest>=8.0",
+  "pre-commit>=3.6",
+]
+
+[project.scripts]
+nature-climate-ai = "nature_climate_ai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

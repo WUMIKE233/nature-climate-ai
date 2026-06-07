@@ -1,0 +1,151 @@
+﻿references:
+  - id: hersbach_era5_2020
+    status: seed_metadata_checked
+    authors: "Hersbach, H. et al."
+    year: 2020
+    title: "The ERA5 global reanalysis"
+    journal: "Quarterly Journal of the Royal Meteorological Society"
+    volume: "146"
+    pages: "1999-2049"
+    doi: "10.1002/qj.3803"
+    role: "ERA5 climate reanalysis data source"
+  - id: huete_modis_vi_2002
+    status: seed_metadata_checked
+    authors: "Huete, A. et al."
+    year: 2002
+    title: "Overview of the radiometric and biophysical performance of the MODIS vegetation indices"
+    journal: "Remote Sensing of Environment"
+    volume: "83"
+    pages: "195-213"
+    doi: "10.1016/S0034-4257(02)00096-2"
+    role: "MODIS vegetation-index product basis"
+  - id: didan_mod13q1_2015
+    status: seed_metadata_checked
+    authors: "Didan, K."
+    year: 2015
+    title: "MOD13Q1 v061: MODIS/Terra Vegetation Indices 16-Day L3 Global 250 m SIN Grid"
+    journal: "NASA LP DAAC"
+    doi: "10.5067/MODIS/MOD13Q1.061"
+    role: "MODIS product DOI reference"
+  - id: munoz_era5land_2021
+    status: seed_metadata_checked
+    authors: "Munoz-Sabater, J. et al."
+    year: 2021
+    title: "ERA5-Land: a state-of-the-art global reanalysis dataset for land applications"
+    journal: "Earth System Science Data"
+    volume: "13"
+    pages: "4349-4383"
+    doi: "10.5194/essd-13-4349-2021"
+    role: "ERA5-Land methodology"
+  - id: reichstein_deep_learning_2019
+    status: seed_metadata_checked
+    authors: "Reichstein, M. et al."
+    year: 2019
+    title: "Deep learning and process understanding for data-driven Earth system science"
+    journal: "Nature"
+    volume: "566"
+    pages: "195-204"
+    doi: "10.1038/s41586-019-0912-1"
+    role: "AI plus process-understanding framing"
+  - id: seneviratne_soil_moisture_2010
+    status: seed_metadata_checked
+    authors: "Seneviratne, S. I. et al."
+    year: 2010
+    title: "Investigating soil moisture–climate interactions in a changing climate: A review"
+    journal: "Earth-Science Reviews"
+    volume: "99"
+    pages: "125-161"
+    doi: "10.1016/j.earscirev.2010.02.004"
+    role: "soil moisture–vegetation coupling evidence"
+  - id: allen_tree_mortality_2015
+    status: seed_metadata_checked
+    authors: "Allen, C. D., Breshears, D. D. & McDowell, N. G."
+    year: 2015
+    title: "On underestimation of global vulnerability to tree mortality and forest die-off from hotter drought in the Anthropocene"
+    journal: "Ecosphere"
+    volume: "6"
+    pages: "art129"
+    doi: "10.1890/ES15-00203.1"
+    role: "vegetation mortality context"
+  - id: mcdowell_woody_mortality_2022
+    status: seed_metadata_checked
+    authors: "McDowell, N. G. et al."
+    year: 2022
+    title: "Mechanisms of woody-plant mortality under rising drought, CO2 and vapour pressure deficit"
+    journal: "Nature Reviews Earth & Environment"
+    volume: "3"
+    pages: "294-308"
+    doi: "10.1038/s43017-022-00272-1"
+    role: "VPD + vegetation stress mechanism"
+  - id: hao_drought_2015
+    status: seed_metadata_checked
+    authors: "Hao, Z. & Singh, V. P."
+    year: 2015
+    title: "Drought characterization from a multivariate perspective: A review"
+    journal: "Journal of Hydrology"
+    volume: "527"
+    pages: "668-678"
+    doi: "10.1016/j.jhydrol.2015.05.031"
+    role: "drought-index baseline context"
+  - id: shen_differentiable_2023
+    status: seed_metadata_checked
+    authors: "Shen, C. et al."
+    year: 2023
+    title: "Differentiable modelling to unify machine learning and physical models for geosciences"
+    journal: "Nature Reviews Earth & Environment"
+    volume: "4"
+    pages: "552-567"
+    doi: "10.1038/s43017-023-00450-9"
+    role: "ML + climate coupling methods"
+  - id: barnes_indicator_2020
+    status: seed_metadata_checked
+    authors: "Barnes, E. A. et al."
+    year: 2020
+    title: "Indicator patterns of forced change learned by an artificial neural network"
+    journal: "Journal of Advances in Modeling Earth Systems"
+    volume: "12"
+    pages: "e2020MS002165"
+    doi: "10.1029/2020MS002165"
+    role: "ML interpretability precedent"
+  - id: grossiord_vpd_2020
+    status: seed_metadata_checked
+    authors: "Grossiord, C. et al."
+    year: 2020
+    title: "Plant responses to rising vapor pressure deficit"
+    journal: "New Phytologist"
+    volume: "226"
+    pages: "1550-1566"
+    doi: "10.1111/nph.16485"
+    role: "VPD eco-physiology mechanism"
+  - id: zhou_soil_carbon_2019
+    status: seed_metadata_checked
+    authors: "Zhou, S., Williams, A. P., Lintner, B. R., Berg, A. M. & Gentine, P."
+    year: 2019
+    title: "Large and persistent soil carbon losses from the 2011 Texas drought"
+    journal: "Nature Geoscience"
+    volume: "12"
+    pages: "943-949"
+    doi: "10.1038/s41561-019-0460-1"
+    role: "drought-impact evidence"
+  - id: gorelick_gee_2017
+    status: seed_metadata_checked
+    authors: "Gorelick, N. et al."
+    year: 2017
+    title: "Google Earth Engine: Planetary-scale geospatial analysis for everyone"
+    journal: "Remote Sensing of Environment"
+    volume: "202"
+    pages: "18-27"
+    doi: "10.1016/j.rse.2017.06.031"
+    role: "Google Earth Engine platform reference"
+  - id: pastorello_fluxnet2015_2020
+    status: seed_metadata_checked
+    authors: "Pastorello, G. et al."
+    year: 2020
+    title: "The FLUXNET2015 dataset and the ONEFlux processing pipeline for eddy covariance data"
+    journal: "Scientific Data"
+    volume: "7"
+    pages: "225"
+    doi: "10.1038/s41597-020-0534-3"
+    role: "FLUXNET dataset reference"
+
+literature_gaps: []

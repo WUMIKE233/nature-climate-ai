@@ -1,0 +1,11 @@
+# Current local scaffold lockfile.
+# Regenerate after dependency updates and before any public code release.
+cdsapi==0.7.7
+earthaccess==0.18.0
+# nature-climate-ai==0.1.0  # local editable project
+netCDF4==1.7.4
+numpy==2.4.6
+pandas==3.0.3
+pytest==9.0.3
+pyyaml==6.0.3
+xarray==2026.4.0

@@ -1,0 +1,194 @@
+project:
+  evidence_policy: "A manuscript claim can be finalized only after the linked evidence item is complete."
+  status_values:
+    - pending
+    - in_progress
+    - complete
+    - blocked
+
+items:
+  - id: e00_data_qc
+    status: pending
+    manuscript_claim: "Public data access, metadata templates and local data inventory are ready for downstream analysis."
+    required_artifacts:
+      - "results/qc/e00_data_qc_report.md"
+      - "data/metadata/data_access_manifest.csv"
+      - "data/metadata/data_access_plan.md"
+      - "data/metadata/provider_request_manifest.csv"
+      - "data/metadata/provider_request_templates.md"
+      - "data/metadata/provider_requests/era5_request_template.yaml"
+      - "data/metadata/provider_requests/modis_request_template.yaml"
+      - "data/metadata/provider_requests/fluxnet_request_template.yaml"
+      - "data/metadata/data_access_template_audit.md"
+      - "data/metadata/data_access_template_status.csv"
+      - "data/checksums/data_checksum_audit.md"
+      - "data/checksums/data_checksums.csv"
+      - "data/metadata/era5_access_log.md"
+      - "data/metadata/modis_quality_flags.md"
+      - "data/metadata/fluxnet_policy_review.md"
+  - id: data_access_era5
+    status: pending
+    manuscript_claim: "ERA5/ERA5-Land climate variables are available for the configured years and domain."
+    required_artifacts:
+      - "data/metadata/era5_request_parameters.yaml"
+      - "data/metadata/era5_access_log.md"
+  - id: era5_climate_features
+    status: pending
+    manuscript_claim: "ERA5/ERA5-Land climate variables have been converted into leakage-safe lagged precursor features."
+    required_artifacts:
+      - "data/processed/climate_lag_features.csv"
+      - "results/qc/era5_climate_feature_report.md"
+      - "data/metadata/era5_request_parameters.yaml"
+  - id: data_access_modis
+    status: pending
+    manuscript_claim: "MODIS EVI/NDVI records are available with quality flags for vegetation-stress event construction."
+    required_artifacts:
+      - "data/metadata/modis_products.yaml"
+      - "data/metadata/modis_quality_flags.md"
+  - id: modis_quality_filtering
+    status: pending
+    manuscript_claim: "MODIS observations have been filtered using documented quality flags before anomaly estimation."
+    required_artifacts:
+      - "data/interim/modis_quality_filtered.csv"
+      - "results/qc/modis_quality_filter_report.md"
+      - "data/metadata/modis_quality_flags.md"
+  - id: data_access_fluxnet
+    status: pending
+    manuscript_claim: "FLUXNET site observations can be used for independent ecosystem-function validation."
+    required_artifacts:
+      - "data/metadata/fluxnet_sites.csv"
+      - "data/metadata/fluxnet_policy_review.md"
+  - id: stress_event_catalogue
+    status: pending
+    manuscript_claim: "A global catalogue of persistent vegetation-stress events has been derived from quality-filtered MODIS anomalies."
+    required_artifacts:
+      - "results/stress_events/event_catalogue_summary.csv"
+      - "results/stress_events/quality_control_report.md"
+  - id: modeling_dataset
+    status: pending
+    manuscript_claim: "Lagged ERA5/ERA5-Land precursor features and MODIS vegetation-stress labels have been assembled into a model-ready dataset."
+    required_artifacts:
+      - "data/processed/modeling_dataset.csv"
+      - "results/qc/modeling_dataset_report.md"
+      - "data/processed/climate_lag_features.csv"
+      - "results/stress_events/event_catalogue_summary.csv"
+  - id: baseline_evaluation
+    status: pending
+    manuscript_claim: "Simple baseline models have been evaluated on the same supervised dataset and temporal holdout used for AI comparison."
+    required_artifacts:
+      - "results/validation/baseline_metrics.csv"
+      - "results/validation/baseline_comparison.md"
+      - "data/processed/modeling_dataset.csv"
+  - id: precursor_discovery
+    status: pending
+    manuscript_claim: "The model discovers lagged compound climate precursor states that precede vegetation stress."
+    required_artifacts:
+      - "results/modeling/feature_attribution_table.csv"
+      - "results/modeling/lag_response_summary.csv"
+      - "results/modeling/precursor_discovery_report.md"
+  - id: temporal_holdout_validation
+    status: pending
+    manuscript_claim: "Ranked precursor candidates have been evaluated on the configured temporal holdout years."
+    required_artifacts:
+      - "results/validation/temporal_holdout_metrics.csv"
+      - "results/validation/temporal_holdout_report.md"
+      - "results/modeling/feature_attribution_table.csv"
+  - id: spatial_holdout_validation
+    status: pending
+    manuscript_claim: "Ranked precursor candidates have been evaluated under leave-one-region-out spatial validation."
+    required_artifacts:
+      - "results/validation/spatial_holdout_metrics.csv"
+      - "results/validation/spatial_holdout_report.md"
+      - "data/processed/modeling_dataset.csv"
+  - id: predictive_validation
+    status: pending
+    manuscript_claim: "The AI framework improves held-out prediction over climatology, standard indices and simple baselines."
+    required_artifacts:
+      - "results/validation/predictive_validation_summary.csv"
+      - "results/validation/predictive_validation_summary.md"
+      - "results/validation/uncertainty_intervals.csv"
+      - "results/validation/uncertainty_audit.md"
+      - "results/validation/temporal_holdout_metrics.csv"
+      - "results/validation/spatial_holdout_metrics.csv"
+      - "results/validation/baseline_metrics.csv"
+      - "results/validation/baseline_comparison.md"
+  - id: robustness_falsification
+    status: pending
+    manuscript_claim: "Candidate precursor findings survive falsification and robustness checks across placebo lags, stress thresholds, biomes and alternate vegetation indicators."
+    required_artifacts:
+      - "results/validation/placebo_metrics.csv"
+      - "results/validation/placebo_validation.md"
+      - "results/validation/threshold_sensitivity.csv"
+      - "results/validation/threshold_sensitivity.md"
+      - "results/validation/biome_metrics.csv"
+      - "results/validation/biome_validation.md"
+      - "results/validation/sensor_cross_validation.csv"
+      - "results/validation/sensor_cross_validation.md"
+  - id: minimum_publishable_evidence_slice
+    status: pending
+    manuscript_claim: "The minimum pilot evidence slice supports continued expansion toward a full Nature or Science submission package."
+    required_artifacts:
+      - "figures/generated/pilot_figure_manifest.csv"
+      - "figures/generated/pilot_figure_generation_report.md"
+      - "results/pilot/minimum_evidence_slice_report.md"
+      - "results/pilot/minimum_evidence_slice_status.csv"
+      - "figures/generated/pilot_fig1_stress_event_map.png"
+      - "figures/generated/pilot_fig2_precursor_pathway.png"
+      - "figures/generated/pilot_fig3_predictive_validation.png"
+  - id: ecosystem_validation
+    status: pending
+    manuscript_claim: "Predicted precursor states are independently associated with ecosystem-function anomalies at FLUXNET sites."
+    required_artifacts:
+      - "data/processed/fluxnet_anomalies.csv"
+      - "results/fluxnet/predicted_stress_windows.csv"
+      - "results/fluxnet/site_anomaly_metrics.csv"
+      - "results/fluxnet/validation_summary.md"
+      - "data/metadata/fluxnet_policy_review.md"
+  - id: figure_package
+    status: pending
+    manuscript_claim: "All main figures are regenerated from analysis artifacts and are suitable for peer review."
+    required_artifacts:
+      - "figures/generated/fig1_workflow.svg"
+      - "figures/generated/figure_manifest.csv"
+      - "figures/generated/figure_generation_report.md"
+      - "figures/generated/fig2_precursors.png"
+      - "figures/generated/fig3_validation.png"
+      - "figures/generated/fig4_fluxnet.png"
+  - id: manuscript_finalization
+    status: pending
+    manuscript_claim: "The manuscript text, figures, cover letter and submission checklist are ready for journal submission."
+    required_artifacts:
+      - "reproducibility/environment_report.md"
+      - "reproducibility/command_manifest.csv"
+      - "reproducibility/environment.yml"
+      - "reproducibility/requirements-lock.txt"
+      - "reproducibility/random_seed_manifest.yaml"
+      - "reproducibility/compute_budget.md"
+      - "reproducibility/public_release_audit.md"
+      - "reproducibility/public_release_status.csv"
+      - "reproducibility/pipeline_smoke_report.md"
+      - "reproducibility/pipeline_smoke_manifest.csv"
+      - "reproducibility/readiness_dashboard.md"
+      - "reproducibility/readiness_dashboard.csv"
+      - "manuscript/reference_metadata.yaml"
+      - "manuscript/reference_audit.md"
+      - "manuscript/reference_status.csv"
+      - "manuscript/author_metadata.yaml"
+      - "manuscript/author_metadata_audit.md"
+      - "manuscript/author_metadata_status.csv"
+      - "manuscript/placeholder_evidence_map.md"
+      - "manuscript/placeholder_evidence_map.csv"
+      - "docs/nature_claim_strategy.md"
+      - "docs/editorial_significance_rationale.md"
+      - "docs/known_risks_and_mitigation.md"
+      - "docs/validation_design.md"
+      - "docs/model_interpretability_plan.md"
+      - "docs/robustness_and_falsification_plan.md"
+      - "docs/data_ethics_and_licensing.md"
+      - "docs/target_journal_decision_tree.md"
+      - "docs/minimum_publishable_evidence_slice.md"
+      - "manuscript/submission_package_audit.md"
+      - "manuscript/submission_package_status.csv"
+      - "manuscript/final/nature_article.docx"
+      - "manuscript/final/nature_article.pdf"
+      - "manuscript/final/submission_ready_checklist.md"

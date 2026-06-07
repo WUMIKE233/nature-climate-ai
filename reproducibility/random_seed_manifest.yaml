@@ -1,0 +1,13 @@
+global_seed: 20260605
+policy: "Use fixed seeds for stochastic preprocessing, model training, validation resampling and figure sampling where scientifically appropriate."
+stages:
+  preprocessing: 20260605
+  baseline_models: 20260606
+  ai_model_training: 20260607
+  bootstrap_uncertainty: 20260608
+  placebo_tests: 20260609
+  pilot_figures: 20260610
+notes:
+  - "Seeds do not replace reporting uncertainty intervals or robustness checks."
+  - "Record any non-deterministic GPU kernels or distributed-training settings before manuscript submission."
+中文审阅说明: "随机种子清单用于复现实验流程，但不能替代不确定性分析、稳健性检验或独立验证。"

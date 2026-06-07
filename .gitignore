@@ -1,0 +1,36 @@
+﻿.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.test_tmp/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+tmp/
+
+# Large data files (NOT pushed to GitHub)
+data/raw/
+data/interim/
+data/processed/
+data/checksums/
+*.zip
+*.nc
+*.nc4
+*.h5
+*.hdf
+*.hdf5
+*.zarr/
+*.tif
+
+# Tokens / secrets
+.edl_token
+.cdsapirc
+credentials
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

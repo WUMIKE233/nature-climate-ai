@@ -1,0 +1,15 @@
+artifact,bytes
+outputs/smoke/raw/modis_observations.csv,495
+outputs/smoke/interim/modis_quality_filtered.csv,541
+outputs/smoke/processed/modis_anomalies.csv,1128
+outputs/smoke/stress_events/event_catalogue_summary.csv,204
+outputs/smoke/interim/era5_composite_climate.csv,748
+outputs/smoke/processed/climate_lag_features.csv,3591
+outputs/smoke/processed/modeling_dataset.csv,3822
+outputs/smoke/validation/baseline_metrics.csv,5598
+outputs/smoke/modeling/feature_attribution_table.csv,3563
+outputs/smoke/modeling/lag_response_summary.csv,1743
+outputs/smoke/validation/temporal_holdout_metrics.csv,920
+outputs/smoke/validation/spatial_holdout_metrics.csv,1022
+outputs/smoke/validation/predictive_validation_summary.csv,3032
+outputs/smoke/validation/uncertainty_intervals.csv,16157

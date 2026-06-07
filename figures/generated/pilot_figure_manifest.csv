@@ -1,0 +1,4 @@
+figure,path,status
+pilot_fig1,figures/generated/pilot_fig1_stress_event_map.png,generated_from_input
+pilot_fig2,figures/generated/pilot_fig2_precursor_pathway.png,generated_from_input
+pilot_fig3,figures/generated/pilot_fig3_predictive_validation.png,generated_from_input

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+</marker>
+</defs>
+<rect width="960" height="600" fill="#ffffff"/>
+<text x="40" y="48" font-size="24" font-weight="800" fill="#111827">AI-guided discovery of climate precursors for global vegetation stress</text>
+<text x="40" y="76" font-size="14" fill="#475569">Fig. 1 schematic: workflow only; result panels remain evidence-gated.</text>
+<rect x="40" y="115" width="250" height="92" rx="8" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+<text x="56" y="143" font-size="18" font-weight="700" fill="#111827">Public data</text>
+<text x="56" y="169" font-size="13" fill="#374151">ERA5 + MODIS + FLUXNET</text>
+<rect x="350" y="115" width="250" height="92" rx="8" fill="#dcfce7" stroke="#1f2937" stroke-width="1.5"/>
+<text x="366" y="143" font-size="18" font-weight="700" fill="#111827">Quality control</text>
+<text x="366" y="169" font-size="13" fill="#374151">MODIS flags + access audit</text>
+<rect x="660" y="115" width="250" height="92" rx="8" fill="#fef3c7" stroke="#1f2937" stroke-width="1.5"/>
+<text x="676" y="143" font-size="18" font-weight="700" fill="#111827">Stress events</text>
+<text x="676" y="169" font-size="13" fill="#374151">EVI/NDVI anomalies</text>
+<rect x="40" y="285" width="250" height="92" rx="8" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="56" y="313" font-size="18" font-weight="700" fill="#111827">Climate lags</text>
+<text x="56" y="339" font-size="13" fill="#374151">ERA5 lead windows: 16, 32, 48, 64 d</text>
+<rect x="350" y="285" width="250" height="92" rx="8" fill="#fae8ff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="366" y="313" font-size="18" font-weight="700" fill="#111827">AI discovery</text>
+<text x="366" y="339" font-size="13" fill="#374151">interpretable precursor ranking</text>
+<rect x="660" y="285" width="250" height="92" rx="8" fill="#fee2e2" stroke="#1f2937" stroke-width="1.5"/>
+<text x="676" y="313" font-size="18" font-weight="700" fill="#111827">Validation</text>
+<text x="676" y="339" font-size="13" fill="#374151">temporal + spatial + FLUXNET</text>
+<rect x="350" y="455" width="250" height="92" rx="8" fill="#f3f4f6" stroke="#1f2937" stroke-width="1.5"/>
+<text x="366" y="483" font-size="18" font-weight="700" fill="#111827">Manuscript gate</text>
+<text x="366" y="509" font-size="13" fill="#374151">claims promoted only after evidence</text>
+<line x1="290" y1="161" x2="350" y2="161" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+<line x1="600" y1="161" x2="660" y2="161" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+<line x1="165" y1="207" x2="165" y2="285" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+<line x1="290" y1="331" x2="350" y2="331" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+<line x1="600" y1="331" x2="660" y2="331" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+<line x1="785" y1="377" x2="600" y2="501" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+<line x1="475" y1="377" x2="475" y2="455" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="40" y="575" font-size="12" fill="#64748b">Generated from config/study.yaml. No scientific result is implied by this schematic.</text>
+</svg>
