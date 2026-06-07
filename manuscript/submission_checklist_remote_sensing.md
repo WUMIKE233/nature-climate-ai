@@ -1,3 +1,5 @@
+> **Archived: superseded by submission_checklist_ecological_indicators.md**
+
 ﻿# Remote Sensing (MDPI) Submission Checklist
 
 > 更新时间: 2026-06-08 | 目标期刊: Remote Sensing (MDPI)

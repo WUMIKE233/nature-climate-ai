@@ -1,3 +1,5 @@
+> **Archived: superseded by cover_letter_ecological_indicators.md**
+
 ﻿# Cover Letter
 
 **Journal**: Remote Sensing (MDPI)

@@ -194,4 +194,4 @@ The author declares no conflicts of interest.
 
 ---
 
-*Manuscript prepared for submission to Remote Sensing (MDPI). v3, polished 2026-06-08.*
+*Manuscript prepared for submission to Ecological Indicators (Elsevier). v3, polished 2026-06-08.*

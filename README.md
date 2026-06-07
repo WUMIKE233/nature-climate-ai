@@ -4,7 +4,7 @@
 
 ## English
 
-This workspace contains a complete, reproducible research package for discovering climate precursors of satellite-observed vegetation stress across Australia. Target journal: *Remote Sensing* (MDPI), Phase 1 regional-scale SCI paper.
+This workspace contains a complete, reproducible research package for discovering climate precursors of satellite-observed vegetation stress across Australia. Target journal: *Ecological Indicators* (Elsevier), Phase 1 regional-scale SCI paper (subscription, no APC).
 
 **Phase 1: Regional-scale ecological remote sensing research — MODIS (MOD13Q1/MYD13Q1) + ERA5-Land on unified 0.25° grid, 2000–2025, Australia.**
 
@@ -116,15 +116,15 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### Current status
 
-**v1.0-rs: Ready for submission to *Remote Sensing* (MDPI)**. Full shared-grid pipeline completed (PASS_SHARED_GRID). Six publication-quality figures generated with Cartopy. Manuscript v3-revised with F1-based skill scores. MDPI DOCX and double-spaced review DOCX generated. Cover letter prepared. GitHub tag `v1.0-rs` published. Zenodo DOI: 10.5281/zenodo.14882001.
+**v1.0-rs: Ready for submission to *Ecological Indicators* (Elsevier)**. Full shared-grid pipeline completed (PASS_SHARED_GRID). Six publication-quality figures generated with Cartopy. Manuscript v3-revised with F1-based skill scores. MDPI DOCX and double-spaced review DOCX generated. Cover letter prepared. GitHub tag `v1.0-rs` published. Zenodo DOI: 10.5281/zenodo.14882001.
 
 ### Submission maturity
 
-Phase 1 complete and submission-ready. All placeholders cleared. Manuscript, figures, cover letter, and submission checklist are available in `manuscript/`. Submit via [MDPI Susy](https://susy.mdpi.com) → Remote Sensing → Article.
+Phase 1 complete and submission-ready for *Ecological Indicators* (Elsevier). All placeholders cleared. Manuscript, figures, cover letter, and submission checklist are available in `manuscript/`. Submit via [Elsevier Editorial Manager](https://www.editorialmanager.com/ecolind/).
 
 ## 中文
 
-本工作区包含一套完整的可复现研究包，用于发现澳大利亚卫星植被胁迫的气候前兆。投稿目标期刊：*Remote Sensing* (MDPI)，第一阶段定位为区域尺度 SCI 论文。、Science 作为备选定位的气候/生态 AI 研究投稿包，当前工作假设为：
+本工作区包含一套完整的可复现研究包，用于发现澳大利亚卫星植被胁迫的气候前兆。投稿目标期刊：*Ecological Indicators* (Elsevier)，第一阶段定位为区域尺度 SCI 论文。、Science 作为备选定位的气候/生态 AI 研究投稿包，当前工作假设为：
 
 ****第一阶段：区域尺度生态遥感研究 — MODIS + ERA5-Land，统一 0.25° 网格，2000–2025 年，澳大利亚。****
 
@@ -236,8 +236,8 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### 当前状态
 
-**v1.0-rs：已准备投稿至 *Remote Sensing* (MDPI)**。共享网格管道全部完成 (PASS_SHARED_GRID)。6 张论文图表使用 Cartopy 生成。稿件 v3-revised 使用 F1-based skill scores。已生成 MDPI DOCX 和双倍行距审阅 DOCX。投稿信已准备就绪。GitHub tag `v1.0-rs` 已发布。Zenodo DOI: 10.5281/zenodo.14882001。
+**v1.0-rs：已准备投稿至 *Ecological Indicators* (Elsevier)**。共享网格管道全部完成 (PASS_SHARED_GRID)。6 张论文图表使用 Cartopy 生成。稿件 v3-revised 使用 F1-based skill scores。已生成 MDPI DOCX 和双倍行距审阅 DOCX。投稿信已准备就绪。GitHub tag `v1.0-rs` 已发布。Zenodo DOI: 10.5281/zenodo.14882001。
 
 ### 当前投稿成熟度
 
-第一阶段已完成，具备投稿条件。所有占位符已清除。稿件、图表、投稿信、投稿检查清单均位于 `manuscript/`。通过 [MDPI Susy](https://susy.mdpi.com) → Remote Sensing → Article 提交。
+第一阶段已完成，具备投稿条件。所有占位符已清除。稿件、图表、投稿信、投稿检查清单均位于 `manuscript/`。通过 [Elsevier Editorial Manager](https://www.editorialmanager.com/ecolind/) 提交。
