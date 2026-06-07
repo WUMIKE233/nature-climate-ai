@@ -116,11 +116,11 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### Current status
 
-**Phase 1 complete**: Full analysis pipeline executed, 6 manuscript figures generated, GitHub repository public (v0.1.0), manuscript draft ready for submission to *Remote Sensing* (MDPI). The next scientific step is to acquire data, run the stress-event and precursor-discovery workflow, validate temporal and spatial generalization, then promote only verified findings into the manuscript.
+**v1.0-rs: Ready for submission to *Remote Sensing* (MDPI)**. Full shared-grid pipeline completed (PASS_SHARED_GRID). Six publication-quality figures generated with Cartopy. Manuscript v3-revised with F1-based skill scores. MDPI DOCX and double-spaced review DOCX generated. Cover letter prepared. GitHub tag `v1.0-rs` published. Zenodo DOI: 10.5281/zenodo.14882001.
 
 ### Submission maturity
 
-This project is in Phase 1: a complete regional-scale analysis targeting *Remote Sensing* (MDPI) or equivalent ecological remote sensing / environmental data science journal, not the final submission stage. Before any `RESULT_REQUIRED` placeholder can be replaced, the project must complete a minimum evidence chain: public-data access, vegetation-stress event catalogue, temporal and spatial validation, compound-interaction ablations, robustness/falsification checks, independent ecosystem validation and reproducibility records. The recommended next milestone is a minimum publishable evidence slice that can produce pilot stress-event, precursor-pathway and predictive-validation figures.
+Phase 1 complete and submission-ready. All placeholders cleared. Manuscript, figures, cover letter, and submission checklist are available in `manuscript/`. Submit via [MDPI Susy](https://susy.mdpi.com) → Remote Sensing → Article.
 
 ## 中文
 
@@ -236,8 +236,8 @@ python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/flux
 
 ### 当前状态
 
-**第一阶段已完成**：全部分析管道已执行，6 张稿件图表已生成，GitHub 仓库已公开 (v0.1.0)，稿件初稿准备投稿到 *Remote Sensing* (MDPI)。下一步科学工作是获取数据、运行植被胁迫事件与气候前兆发现流程、验证时间与空间泛化能力，然后只把经过验证的发现写入主稿。
+**v1.0-rs：已准备投稿至 *Remote Sensing* (MDPI)**。共享网格管道全部完成 (PASS_SHARED_GRID)。6 张论文图表使用 Cartopy 生成。稿件 v3-revised 使用 F1-based skill scores。已生成 MDPI DOCX 和双倍行距审阅 DOCX。投稿信已准备就绪。GitHub tag `v1.0-rs` 已发布。Zenodo DOI: 10.5281/zenodo.14882001。
 
 ### 当前投稿成熟度
 
-本项目当前处于第一阶段：已完成区域尺度分析，目标 *Remote Sensing* (MDPI) 或同等级生态遥感 / 环境数据科学 SCI 期刊，而非最终投稿阶段。在正式替换 `RESULT_REQUIRED` 占位符之前，必须完成最低证据链：公共数据访问、植被胁迫事件目录、时间与空间验证、复合机制消融、稳健性/证伪测试、独立生态系统验证和可复现记录。建议下一里程碑是先完成最小可验证结果切片，产出 pilot 级的胁迫事件图、前兆通路图和预测验证图。
+第一阶段已完成，具备投稿条件。所有占位符已清除。稿件、图表、投稿信、投稿检查清单均位于 `manuscript/`。通过 [MDPI Susy](https://susy.mdpi.com) → Remote Sensing → Article 提交。
