@@ -34,6 +34,7 @@
 | 5 | ML 训练细节 | Methods 2.6: RF/XGBoost 参数, class weight, SHAP |
 | 6 | 纬度分层限制 | Discussion: 承认 coarse proxy，建议 aridity/land-cover |
 | 7 | 审阅版 DOCX | 已同步更新 |
+| 8 | F1-based skill score 数值修正 | 0.319→0.660 (persistence), 0.114→0.115 (VPD family), Abstract/Results/Discussion/Conclusions/Cover letter 全部更新 |
 
 ## 图表 / Figures
 
@@ -53,7 +54,7 @@
 | 1 | Cover Letter | `manuscript/cover_letter_remote_sensing.md` | ✅ 已更新 |
 | 2 | Manuscript (Markdown) | `manuscript/nature_article_revised.md` | ✅ v3-revised |
 | 3 | Manuscript (Review DOCX) | `manuscript/nature_review_manuscript.docx` | ✅ 已更新 |
-| 4 | MDPI Template DOCX | `manuscript/manuscript_remote_sensing.docx` | ⚠️ 需用 MDPI 模板重新生成 |
+| 4 | MDPI Template DOCX | `manuscript/manuscript_remote_sensing_revised.docx` | ✅ v3-revised已更新 (F1-based skill scores) |
 | 5 | Figure 1–5 + S1 | `figures/generated/fig*.png` | ✅ 6 张 |
 | 6 | GitHub Repository | https://github.com/WUMIKE233/nature-climate-ai | ✅ |
 | 7 | Zenodo DOI | 10.5281/zenodo.14882001 | ⏳ 需更新归档 |
@@ -75,7 +76,7 @@
 
 | # | 待办 | 优先级 |
 |---|------|:--:|
-| 1 | 用 MDPI 模板从 revised MD 重新生成 DOCX | 高 |
+| 1 | 用 MDPI 模板从 revised MD 重新生成 DOCX | ✅ 已完成 (2026-06-08) |
 | 2 | 更新 Zenodo 归档（包含最新代码） | 中 |
 | 3 | 确认所有图表引用与实际文件一致 | 高 |
 | 4 | 检查 MDPI 期刊: 是否有字数/图表限制 | 中 |
@@ -86,3 +87,5 @@
 - 记录 Manuscript ID
 - 更新 README 投稿状态
 - MDPI 审稿周期通常 4–8 周
+
+**更新记录 / 2026-06-08 update**: F1-based skill score 代替 accuracy-based。Persistence SS: 0.319→0.660; VPD family SS: 0.115。已同步更新 manuscript markdown、MDPI DOCX、Review DOCX、Cover letter。
