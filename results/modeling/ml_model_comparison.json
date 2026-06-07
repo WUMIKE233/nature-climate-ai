@@ -1,0 +1,19 @@
+{
+  "rf": {
+    "precision": 0.18458746107905907,
+    "recall": 0.796650416210659,
+    "false_alarm_ratio": 0.8154125389209409
+  },
+  "xgboost": {
+    "precision": 0.19087039356550867,
+    "recall": 0.7914237389314496,
+    "false_alarm_ratio": 0.8091296064344913
+  },
+  "shap_top5": [
+    "soil_moisture_anomaly_lag_16d",
+    "soil_moisture_anomaly_lag_32d",
+    "soil_moisture_anomaly_lag_64d",
+    "soil_moisture_anomaly_lag_48d",
+    "vapour_pressure_deficit_anomaly_lag_16d"
+  ]
+}
