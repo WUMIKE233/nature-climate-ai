@@ -1,0 +1,38 @@
+{
+  "title": "nature-climate-ai: Interpretable Discovery of Lagged Climate Precursors for Vegetation-Index Stress across Australia",
+  "description": "Reproducible research package for discovering climate precursors of satellite-observed vegetation stress across Australia. Phase 1 regional-scale SCI paper targeting Remote Sensing (MDPI). Uses MODIS (MOD13Q1/MYD13Q1) vegetation indices and ERA5-Land climate reanalysis on a unified 0.25-degree shared grid, 2000-2025.",
+  "creators": [
+    {
+      "name": "Wu, Zhuoxian",
+      "affiliation": "Guangdong Neusoft Institute of Technology",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "MODIS",
+    "ERA5-Land",
+    "vegetation stress",
+    "climate precursor",
+    "remote sensing",
+    "Australia",
+    "Google Earth Engine",
+    "drought early warning",
+    "soil moisture",
+    "vapour pressure deficit",
+    "machine learning"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/WUMIKE233/nature-climate-ai",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "communities": [],
+  "grants": []
+}
