@@ -1,0 +1,15 @@
+group,artifact,exists,role
+stress_event_definition,results/stress_events/event_catalogue_summary.csv,True,pilot stress-event catalogue
+stress_event_definition,results/stress_events/quality_control_report.md,True,stress-event QC report
+precursor_pathway,results/modeling/feature_attribution_table.csv,True,ranked precursor candidates
+precursor_pathway,results/modeling/lag_response_summary.csv,True,lag-response evidence
+predictive_validation,results/validation/baseline_metrics.csv,True,baseline comparator metrics
+predictive_validation,results/validation/temporal_holdout_metrics.csv,True,temporal holdout metrics
+predictive_validation,results/validation/spatial_holdout_metrics.csv,True,spatial holdout metrics
+predictive_validation,results/validation/predictive_validation_summary.csv,True,combined predictive validation summary
+robustness_falsification,results/validation/placebo_metrics.csv,True,placebo lag-shift test
+robustness_falsification,results/validation/threshold_sensitivity.csv,True,stress-threshold sensitivity
+robustness_falsification,results/validation/biome_metrics.csv,False,biome-stratified validation
+pilot_figures,figures/generated/pilot_fig1_stress_event_map.png,False,Pilot Fig. 1 stress-event map
+pilot_figures,figures/generated/pilot_fig2_precursor_pathway.png,False,Pilot Fig. 2 precursor pathway
+pilot_figures,figures/generated/pilot_fig3_predictive_validation.png,False,Pilot Fig. 3 predictive validation

@@ -9,9 +9,9 @@ data_checksums,READY,0,1719 checksum rows recorded for local data files,data/che
 evidence_registry,NOT_READY,18,0/18 evidence items complete,evidence/registry.yaml
 evidence_artifacts,NOT_READY,9,9 missing artifacts; 0 placeholder files,evidence/artifact_audit.md; evidence/artifact_audit.csv
 figure_assets,PARTIAL_READY,3,Fig. 1 workflow assets exist; result figures remain blocked by real analysis,figures/generated/fig1_workflow.svg; figures/generated/figure_manifest.csv; figures/generated/figure_generation_report.md; figures/generated/fig2_precursors.png; figures/generated/fig3_validation.png; figures/generated/fig4_fluxnet.png
-manuscript_format,NOT_READY,4,1822 main-text words; 0 display items,manuscript/nature_article_draft.md
+manuscript_format,NOT_READY,8,0 main-text words; 6 display items,manuscript/nature_article_revised.md
 submission_package,NOT_READY,5,0 missing files; 5 placeholder files,manuscript/submission_package_audit.md; manuscript/submission_package_status.csv
 references,READY,0,15/15 seed references checked; 0 literature gaps,manuscript/reference_metadata.yaml
 author_metadata,READY,0,0 author metadata issues remain,manuscript/author_metadata.yaml; manuscript/author_metadata_audit.md; manuscript/author_metadata_status.csv
 public_release,READY,0,0 public release issues remain,reproducibility/public_release_audit.md; reproducibility/public_release_status.csv
-submission_gate,NOT_READY,1,18 evidence items are not complete.,manuscript/nature_article_draft.md; evidence/registry.yaml
+submission_gate,NOT_READY,1,18 evidence items are not complete.,manuscript/nature_article_revised.md; evidence/registry.yaml

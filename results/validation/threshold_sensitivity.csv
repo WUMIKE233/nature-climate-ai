@@ -1,0 +1,5 @@
+test,percentile,minimum_duration,event_count,units_with_events,input_rows,valid_rows
+threshold_sensitivity,5.0,2,86556,10689,11607157,11607157
+threshold_sensitivity,10.0,2,155644,10721,11607157,11607157
+threshold_sensitivity,15.0,2,215622,10735,11607157,11607157
+threshold_sensitivity,20.0,2,271466,10738,11607157,11607157
