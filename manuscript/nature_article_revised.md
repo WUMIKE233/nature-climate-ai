@@ -56,11 +56,11 @@ To assess whether non-linear models improve upon single-variable climate thresho
 
 Temporal holdout reserved the most recent 20% of years (2019–2025) for evaluation. All anomaly thresholds, climatologies, and model parameters were estimated from the training period (2000–2018). Spatial holdout used a leave-one-region-out design across 20 contiguous regions derived from the regular grid structure by grouping adjacent pixel rows and columns into blocks of approximately equal size. For each held-out region, models were trained on the remaining 19 regions and evaluated on the held-out region.
 
-### 2.7 Robustness Checks
+### 2.8 Robustness Checks
 
 A shuffled-lag placebo test randomly permuted the lag assignments of climate features (while preserving the feature value distributions) and compared the resulting point-biserial correlations against the true values. Threshold sensitivity was assessed by repeating the event catalogue at anomaly percentiles of 5%, 10%, 15%, and 20%. All random seeds were fixed (seed = 42) to ensure reproducibility.
 
-### 2.8 Use of AI-Assisted Tools
+### 2.9 Use of AI-Assisted Tools
 
 AI-assisted coding and language tools (OpenAI Codex, GPT-5) were used to support code refactoring, pipeline automation, and manuscript editing. All scientific analyses, methodological decisions, result interpretation, and final text were verified and approved by the author. No AI-generated content was included without human review.
 
@@ -72,7 +72,7 @@ We analysed 22,267,872 MODIS vegetation-index observations from Terra (MOD13Q1 v
 
 ### 3.2 Climate Precursor Features
 
-Twenty lagged climate predictors were constructed from ERA5-Land hourly reanalysis, aggregated into the same 16-day compositing windows as the MODIS data: 2 m temperature, total precipitation, soil moisture (mean of volumetric soil water layers 1 and 2), surface net solar radiation, and VPD (computed in GEE from window-mean temperature and dewpoint temperature). Anomalies were computed relative to each pixel''s 26-year climatology and shifted to lead times of 16, 32, 48, and 64 days, producing 20 lagged anomaly features. All features were aligned to vegetation observations without using future information relative to each observation row.
+Twenty lagged climate predictors were constructed from ERA5-Land hourly reanalysis, aggregated into the same 16-day compositing windows as the MODIS data: 2 m temperature, total precipitation, soil moisture (mean of volumetric soil water layers 1 and 2), surface net solar radiation, and VPD (computed in GEE from window-mean temperature and dewpoint temperature). Anomalies were computed relative to each pixel''s training-period climatology estimated from 2000–2018 and shifted to lead times of 16, 32, 48, and 64 days, producing 20 lagged anomaly features. All features were aligned to vegetation observations without using future information relative to each observation row.
 
 ### 3.3 Discovery of Precursor Signals
 
