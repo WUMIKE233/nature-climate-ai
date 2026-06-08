@@ -24,7 +24,9 @@ Here we address these gaps with an interpretable discovery framework that (1) de
 
 ## 2. Materials and Methods
 
-### 2.1 Data Sources and Shared-Grid Preprocessing
+The ecological informatics workflow developed in this study comprises four stages: (1) shared-grid data ingestion and quality control, (2) vegetation-stress event definition and lagged climate feature engineering, (3) systematic model comparison across baseline, threshold, and machine-learning approaches, and (4) validation and interpretability analysis. All stages were implemented as version-controlled Python modules with explicit parameterisation.
+
+### 2.1 Study Domain and Data Sources and Shared-Grid Preprocessing
 
 MODIS Terra (MOD13Q1 v061) and Aqua (MYD13Q1 v061) 16-day vegetation-index products were accessed via Google Earth Engine [11] and exported as GeoTIFF files on a unified 0.25-degree geographic grid (EPSG:4326) spanning 109.75°E–150.25°E, 40.25°S–10.00°S (162 × 121 pixels). The MODIS products natively use a sinusoidal projection at approximately 250 m resolution; the GEE export pipeline reprojects both MODIS and ERA5 data to the shared grid at export time. Quality filtering was performed within GEE using the VI Quality (SummaryQA) bitmask prior to spatial aggregation: only MODIS pixels satisfying the QA criteria were retained, and grid-cell EVI/NDVI values were aggregated to the 0.25° grid using the mean of valid observations (ee.Reducer.mean()). ERA5 continuous fields were resampled using bilinear interpolation. The QA criteria were: MODLAND QA bits 0–1 ≤ 1, VI usefulness bits 2–5 ≤ 11, aerosol quantity bits 6–7 ≤ 1, adjacent cloud detected (bit 8) = 0, mixed cloud (bit 10) = 0, possible snow/ice (bit 14) = 0, possible shadow (bit 15) = 0. The pre-computed binary quality flag qa_ok was exported as a separate band for each observation date.
 
@@ -70,7 +72,9 @@ AI-assisted coding and language tools (OpenAI Codex, GPT-5) were used to support
 
 ## 3. Results
 
-### 3.1 Vegetation-Stress Event Catalogue
+The ecological informatics pipeline described in Section 2 was executed on the full 26-year data record. Results follow the four-stage structure.
+
+### 3.1 Shared-Grid Data Cube and Vegetation-Stress Event Catalogue
 
 We analysed 22,267,872 MODIS vegetation-index observations from Terra (MOD13Q1 v061) and Aqua (MYD13Q1 v061) 16-day composite products spanning 2000–2025 across the Australian continent. Strict quality filtering using the MODIS VI Quality bitmask retained 11,608,373 observations (52.1%) across 10,766 terrestrial 0.25-degree grid cells. Pixel-level EVI day-of-year climatologies were computed from the quality-filtered record, and negative anomalies exceeding the 10th percentile that persisted for at least two consecutive 16-day compositing periods were flagged as vegetation-stress events (Figure 2). This procedure yielded 1,438,750 anomaly records and a modelling-eligible sample of 7,287,280 rows, of which 503,743 (6.9%) carried positive stress-event labels.
 
