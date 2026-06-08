@@ -1,6 +1,6 @@
 Dear Editors,
 
-I am pleased to submit my manuscript for consideration for publication in Ecological Informatics.
+I am pleased to submit my manuscript entitled "A Reproducible Ecological Informatics Framework for Discovering Lagged Climate Precursors of Vegetation-Index Stress across Australia" for consideration for publication in Ecological Informatics.
 
 This manuscript develops a reproducible computational ecology framework that integrates multi-source Earth observation data (MODIS vegetation indices), climate reanalysis (ERA5-Land), and interpretable machine learning (Random Forest, XGBoost, SHAP) for discovering lagged climate precursors of vegetation stress. The study enforces identical pixel grids for MODIS and ERA5 data through an automated audit, and evaluates precursor signals using temporal holdout, spatial holdout, placebo tests, and threshold-sensitivity analyses. The full pipeline is version-controlled on GitHub and archived with a permanent Zenodo DOI.
 
