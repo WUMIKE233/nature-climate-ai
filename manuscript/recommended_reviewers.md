@@ -1,93 +1,47 @@
-# Recommended Reviewer List / ???????
+Recommended Reviewers
 
-> For submission to *Ecological Indicators* (Elsevier)
-> Manuscript: "Interpretable Discovery of Lagged Climate Precursors for Vegetation-Index Stress across Australia"
-> Date: 2026-06-08
-
----
-
-MDPI typically asks for 3-5 recommended reviewers. Below are suggestions ordered by relevance match. Emails should be verified via institutional websites or recent publications before submission.
-
-MDPI ?????? 3-5 ??????????????????????????????????????????
+For submission to Ecological Informatics (Elsevier)
+Manuscript: A Reproducible Ecological Informatics Framework for Discovering Lagged Climate Precursors of Vegetation-Index Stress across Australia
 
 ---
 
-## 1. Prof. Alfredo Huete (Highly Recommended / ????)
+Reviewer 1
+Name: Prof. Albert van Dijk
+Institution: Australian National University (ANU), Australia
+Expertise: Satellite water cycle observations, Australian water-vegetation coupling, remote sensing data assimilation
+Reason: Australia-based expert on satellite-observed water-vegetation coupling at continental scale. Directly relevant to the Australian-context findings.
+Conflict of interest: None known.
 
-| Field | Detail |
-|-------|--------|
-| Affiliation | University of Technology Sydney (UTS), Australia |
-| Expertise | MODIS vegetation indices (EVI/NDVI), land surface phenology, Australian ecosystems |
-| Why recommend | First author of the foundational MODIS VI paper [Ref. 5 in manuscript]. Deep expertise in Australian vegetation remote sensing and how MODIS quality flags affect VI interpretation. Directly relevant to our quality-filtering methodology. |
-| Recent work | MODIS VI product algorithm, phenology in semi-arid systems, satellite-observed greening/browning trends |
-| ???? | MODIS ??????????????????????? MODIS QA ???????????????????????????????????? |
+Reviewer 2
+Name: Dr. Wouter Dorigo
+Institution: TU Wien, Austria
+Expertise: Satellite soil moisture, ESA CCI Soil Moisture, climate data record validation, multi-source data harmonization
+Reason: Expert on multi-sensor soil moisture harmonization and satellite data alignment. Directly relevant to the shared-grid methodology and soil-moisture precursor findings.
+Conflict of interest: None known.
 
-## 2. Prof. Pierre Gentine
+Reviewer 3
+Name: Prof. Jason Otkin
+Institution: University of Wisconsin-Madison, USA
+Expertise: Flash drought, rapid-onset vegetation stress, satellite-based drought monitoring, evaporative demand
+Reason: Leading expert on flash drought and rapid vegetation stress detection from satellites. Relevant to the sub-seasonal (16-64 day) precursor framework and false-alarm analysis.
+Conflict of interest: None known.
 
-| Field | Detail |
-|-------|--------|
-| Affiliation | Columbia University / LEAP Center, USA |
-| Expertise | Machine learning for Earth system science, land-atmosphere interactions, ecosystem responses to climate extremes |
-| Why recommend | Leading researcher in ML-enhanced understanding of land-atmosphere coupling and drought impacts. Directly relevant to our ML model comparison (RF/XGBoost), SHAP interpretability analysis, and climate-vegetation coupling findings. |
-| Recent work | Differentiable Earth system modeling, ML for carbon-water coupling, compound heat-drought events |
-| ???? | ?????? ML ???????????-?????????? ML ???????????????? XGBoost + SHAP ?????-??????? |
+Reviewer 4
+Name: Prof. Chengquan Huang
+Institution: University of Maryland, USA
+Expertise: Remote sensing of vegetation change, time-series analysis, land cover dynamics
+Reason: Expertise in multi-decadal satellite vegetation time-series analysis and change detection. Relevant to the MODIS EVI anomaly methodology.
+Conflict of interest: None known.
 
-## 3. Dr. Wouter Dorigo
-
-| Field | Detail |
-|-------|--------|
-| Affiliation | TU Wien (Vienna University of Technology), Austria |
-| Expertise | Satellite soil moisture, ESA CCI Soil Moisture, climate data record validation, remote sensing data harmonization |
-| Why recommend | Expert on multi-sensor soil moisture harmonization and satellite data alignment. Directly relevant to our shared-grid methodology, soil-moisture-as-precursor findings, and the broader question of multi-source data integration. |
-| Recent work | ESA CCI Soil Moisture product development, soil moisture drought indicators, multi-decadal satellite data records |
-| ???? | ????????????????????????????????????????????????????????????????? |
-
-## 4. Prof. Jason Otkin
-
-| Field | Detail |
-|-------|--------|
-| Affiliation | University of Wisconsin-Madison / CIMSS, USA |
-| Expertise | Flash drought, rapid-onset vegetation stress, satellite-based drought monitoring, evaporative demand |
-| Why recommend | Leading expert on flash drought and rapid vegetation stress detection from satellites. Directly relevant to our sub-seasonal (16-64 day) precursor framework, VPD-driven stress findings, and false-alarm analysis for early warning. |
-| Recent work | Flash drought characterization, evaporative demand drought index (EDDI), rapid intensification of agricultural drought |
-| ???? | ???flash drought????????????????????? 16-64 ????????? VPD ????????????????????????? |
-
-## 5. Prof. Albert van Dijk
-
-| Field | Detail |
-|-------|--------|
-| Affiliation | Australian National University (ANU), Australia |
-| Expertise | Satellite water cycle observations, Australian water resources, vegetation-water coupling, remote sensing data assimilation |
-| Why recommend | Australia-based expert on satellite-observed water-vegetation coupling at continental scale. Authored influential papers on Australian drought impacts seen from space. Provides essential Australian-context evaluation. |
-| Recent work | Water cycle extremes from satellite, Australian Millennium Drought analysis, GRACE + MODIS synergies |
-| ???? | ????????????????????????-????????????????????????????????????????? |
+Reviewer 5
+Name: Dr. Benjamin Poulter
+Institution: NASA Goddard Space Flight Center, USA
+Expertise: Global vegetation modeling, carbon cycle remote sensing, climate-vegetation interactions
+Reason: Expertise in satellite-based vegetation monitoring and climate-vegetation modelling. Relevant to the broader ecological implications of the precursor framework.
+Conflict of interest: None known.
 
 ---
 
-## Submission Notes / ????
+Note: Email addresses should be verified via institutional websites before submission. All recommended reviewers are from different institutions than the author and have no known conflicts of interest.
 
-1. **Diversity**: Recommended reviewers span Australia (HUETE, VAN DIJK), USA (GENTINE, OTKIN), and Europe (DORIGO), satisfying MDPI's preference for geographic diversity.
-2. **No conflicts**: None of the recommended reviewers are co-authors, collaborators, or from the author's institution (Guangdong Neusoft Institute of Technology).
-3. **Exclude requests**: You may also list researchers to *exclude* (e.g., if you have known conflicts). None have been identified.
-4. **Verification**: Please verify each reviewer's current email via their institutional profile page or most recent publication before submitting.
-
-1. **???**?????????????Huete, van Dijk?????Gentine, Otkin?????Dorigo???? MDPI ????????
-2. **?????**?????????????????????????????????????
-3. **????**???????????????????????????????????????
-4. **??**?????????????????????????????
-
----
-
-## Quick Reference / ????
-
-| # | Name | Country | Core Expertise | Match |
-|---|------|---------|---------------|:--:|
-| 1 | Alfredo Huete | Australia | MODIS VI, Australian veg | ????? |
-| 2 | Pierre Gentine | USA | ML + land-atmosphere | ????? |
-| 3 | Wouter Dorigo | Austria | Soil moisture, data harmonization | ???? |
-| 4 | Jason Otkin | USA | Flash drought, early warning | ???? |
-| 5 | Albert van Dijk | Australia | Australian water-veg coupling | ???? |
-
----
-
-*Generated by Codex (GPT-5) on 2026-06-08 for Ecological Indicators (Elsevier) submission.*
+Prepared for Ecological Informatics (Elsevier) submission. 2026-06-08.

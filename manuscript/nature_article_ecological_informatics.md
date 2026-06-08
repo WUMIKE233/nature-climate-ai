@@ -1,4 +1,4 @@
-﻿# A Reproducible Ecological Informatics Framework for Discovering Lagged Climate Precursors of Vegetation-Index Stress across Australia
+# A Reproducible Ecological Informatics Framework for Discovering Lagged Climate Precursors of Vegetation-Index Stress across Australia
 
 Zhuoxian Wu ()
 
@@ -10,7 +10,7 @@ Guangdong Neusoft Institute of Technology /  NUIT
 
 Satellite vegetation records now span multiple decades, yet the extent to which lagged climate anomalies can serve as interpretable early-warning precursors of vegetation stress—and the limits of such precursors—remains poorly quantified at continental scale. Here we construct a reproducible discovery framework that aligns 26 years (2000–2025) of quality-filtered MODIS vegetation-index anomalies with ERA5-Land climate reanalysis on a unified 0.25° grid across Australia. Vegetation-stress events are defined from pixel-level EVI anomaly climatologies, and 20 lagged climate predictors spanning soil moisture, vapour pressure deficit (VPD), temperature, precipitation, and surface radiation at lead times of 16 to 64 days are evaluated. Soil-moisture deficit and VPD excess emerge as the dominant precursor signals, with the strongest separation between stress and non-stress conditions occurring at 16–32 day lead times. However, even the best-performing single climate precursor (VPD at 16-day lag) achieves only modest precision (0.055) while detecting 61% of stress events on held-out years, and spatial transfer of precursor signals across 20 grid-defined regions exhibits substantial inter-regional variability. A shuffled-lag placebo test and threshold-sensitivity analysis confirm the robustness of the discovered patterns, while comparison against a simple persistence baseline—which achieves precision of 0.659 and recall of 0.661—reveals that knowledge of a pixel''s recent stress history outperforms any single climate variable. The persistence baseline achieves a skill score of 0.660 (SS = (F1 − F1_majority) / (1 − F1_majority)), substantially exceeding the best climate-only precursor (VPD family, skill score 0.115). These results indicate that climate precursors are useful for identifying elevated risk conditions but are insufficient for precise stress-event prediction without vegetation-memory and ecological-context information. The analysis framework is fully reproducible: all data exports, preprocessing scripts, model configurations, and validation outputs are version-controlled on a shared spatial grid and archived with a permanent DOI.
 
-**Keywords**: Ecological informatics; MODIS; ERA5-Land; vegetation stress; climate precursor; machine learning; SHAP; reproducible workflow; Google Earth Engine
+Keywords: Ecological informatics; MODIS; ERA5-Land; vegetation stress; climate precursor; machine learning; SHAP; reproducible workflow; Google Earth Engine
 
 ---
 
@@ -102,7 +102,7 @@ A shuffled-lag placebo test confirmed that the observed precursor associations e
 
 To assess whether non-linear machine-learning (ML) models can improve upon single-variable climate thresholds, we trained Random Forest (100 estimators, max depth = 10, balanced class weights) and XGBoost (100 estimators, max depth = 6, scale-positive-weight, learning rate = 0.1) classifiers on the full 5,282,200-row training set using all 20 lagged climate anomaly features. Models were evaluated on the 2,005,080-row temporal holdout set (2019–2025). The persistence baseline and the best single-variable threshold (VPD at 16-day lag) are included for comparison (Table 1).
 
-**Table 1.** Performance of ML models versus baseline predictors on the temporal holdout set.
+Table 1. Performance of ML models versus baseline predictors on the temporal holdout set.
 
 | Model | Precision | Recall | False Alarm Ratio |
 |-------|:---------:|:------:|:------------------:|
@@ -119,7 +119,7 @@ SHAP (SHapley Additive exPlanations) analysis of the XGBoost model on a 5,000-ro
 
 To evaluate whether predictive performance varies across climate zones, we stratified the holdout set into three latitude bands corresponding to broad climatic regions of Australia: North (tropical, ~10–20°S), Central (subtropical, ~20–30°S), and South (temperate, ~30–40°S). Separate XGBoost models were trained and evaluated for each zone (Table 2).
 
-**Table 2.** XGBoost performance by latitude zone on the temporal holdout set.
+Table 2. XGBoost performance by latitude zone on the temporal holdout set.
 
 | Zone | Samples | Stress Rate | Precision | Recall | FAR |
 |------|:-------:|:-----------:|:---------:|:------:|:---:|
@@ -131,7 +131,7 @@ The central subtropical zone—which encompasses much of Australia''s arid and s
 
 ## 4. Discussion
 
-This study demonstrates how an ecological informatics workflow can reveal both the utility and the limitations of climate-only precursors for vegetation-stress early warning at continental scale. The core contribution is not the finding that VPD or soil moisture precede vegetation stress—which is ecologically expected [12,13]—but rather the provision of a reproducible, multi-source, shared-grid computational framework that enables systematic discovery, validation, and interpretation of precursor signals while rigorously quantifying the false-alarm costs of climate-only prediction. from satellite vegetation records and reanalysis data on a unified spatial grid. The dominant precursor signals—soil-moisture deficit and VPD excess at 16–32 day lead times—are consistent with known ecohydrological mechanisms [12,13], and the decay of predictive signal with increasing lead time suggests that the actionable precursor window in this domain is approximately two to four weeks.
+This study demonstrates how an ecological informatics workflow can reveal both the utility and the limitations of climate-only precursors for vegetation-stress early warning at continental scale. The core contribution is not the finding that VPD or soil moisture precede vegetation stress—which is ecologically expected [12,13]—but rather the provision of a reproducible, multi-source, shared-grid computational framework that enables systematic discovery, validation, and interpretation of precursor signals while rigorously quantifying the false-alarm costs of climate-only prediction. The core contribution is the provision of a reproducible, multi-source, shared-grid computational framework for discovering, validating, and interpreting precursor signals from satellite vegetation records and reanalysis data on a unified spatial grid. The dominant precursor signals—soil-moisture deficit and VPD excess at 16–32 day lead times—are consistent with known ecohydrological mechanisms [12,13], and the decay of predictive signal with increasing lead time suggests that the actionable precursor window in this domain is approximately two to four weeks.
 
 Three findings carry particular implications for satellite-based vegetation stress early warning. First, the persistence baseline is strikingly strong: knowledge of whether a pixel experienced stress in the previous 16-day window already captures two-thirds of future stress events, achieving an F1-based skill score of 0.660—approximately six times that of the best climate-only precursor (VPD family, 0.115). This reflects the slow recovery of water-limited ecosystems after drought onset and implies that any proposed climate-based early-warning system must be benchmarked against persistence to demonstrate added value beyond temporal autocorrelation. Second, the false-alarm ratio of even the best single-variable climate precursor exceeds 0.94: VPD thresholds that detect 61% of stress events also flag approximately 41% of non-stress windows as potential precursors, meaning that over nine in ten positive predictions are false alarms. This trade-off between sensitivity and specificity may be irreducible for purely climate-driven precursors—many vegetation-stress events have non-climatic drivers (fire, disease, land-use change, insect outbreaks) that no climate precursor can anticipate, and the converse case (elevated VPD that does not produce visible canopy stress) may reflect vegetation acclimation, species-specific drought tolerance, or sub-pixel heterogeneity in land cover. Third, the spatial transferability of the VPD signal, while stronger than that of soil moisture and temperature, remains modest, with region-level precision rarely exceeding 0.12. This finding suggests that region-specific calibration or the inclusion of land-cover, soil-type, and plant-functional-type information is likely necessary for operational deployment.
 
@@ -149,33 +149,33 @@ These findings carry two implications for satellite-based vegetation stress earl
 
 ## References
 
-1. Reichstein, M.; Camps-Valls, G.; Stevens, B.; Jung, M.; Denzler, J.; Carvalhais, N.; Prabhat. Deep learning and process understanding for data-driven Earth system science. *Nature* **2019**, *566*, 195–204. DOI: 10.1038/s41586-019-0912-1.
+1. Reichstein, M.; Camps-Valls, G.; Stevens, B.; Jung, M.; Denzler, J.; Carvalhais, N.; Prabhat. Deep learning and process understanding for data-driven Earth system science. *Nature* 2019, *566*, 195–204. DOI: 10.1038/s41586-019-0912-1.
 
-2. Seneviratne, S.I.; Corti, T.; Davin, E.L.; Hirschi, M.; Jaeger, E.B.; Lehner, I.; Orlowsky, B.; Teuling, A.J. Investigating soil moisture–climate interactions in a changing climate: A review. *Earth-Sci. Rev.* **2010**, *99*, 125–161. DOI: 10.1016/j.earscirev.2010.02.004.
+2. Seneviratne, S.I.; Corti, T.; Davin, E.L.; Hirschi, M.; Jaeger, E.B.; Lehner, I.; Orlowsky, B.; Teuling, A.J. Investigating soil moisture–climate interactions in a changing climate: A review. *Earth-Sci. Rev.* 2010, *99*, 125–161. DOI: 10.1016/j.earscirev.2010.02.004.
 
-3. Allen, C.D.; Breshears, D.D.; McDowell, N.G. On underestimation of global vulnerability to tree mortality and forest die-off from hotter drought in the Anthropocene. *Ecosphere* **2015**, *6*, art129. DOI: 10.1890/ES15-00203.1.
+3. Allen, C.D.; Breshears, D.D.; McDowell, N.G. On underestimation of global vulnerability to tree mortality and forest die-off from hotter drought in the Anthropocene. *Ecosphere* 2015, *6*, art129. DOI: 10.1890/ES15-00203.1.
 
-4. McDowell, N.G.; Sapes, G.; Pivovaroff, A.; Adams, H.D.; Allen, C.D.; Anderegg, W.R.L.; Arend, M.; Breshears, D.D.; Brodribb, T.; Choat, B.; et al. Mechanisms of woody-plant mortality under rising drought, CO2 and vapour pressure deficit. *Nat. Rev. Earth Environ.* **2022**, *3*, 294–308. DOI: 10.1038/s43017-022-00272-1.
+4. McDowell, N.G.; Sapes, G.; Pivovaroff, A.; Adams, H.D.; Allen, C.D.; Anderegg, W.R.L.; Arend, M.; Breshears, D.D.; Brodribb, T.; Choat, B.; et al. Mechanisms of woody-plant mortality under rising drought, CO2 and vapour pressure deficit. *Nat. Rev. Earth Environ.* 2022, *3*, 294–308. DOI: 10.1038/s43017-022-00272-1.
 
-5. Huete, A.; Didan, K.; Miura, T.; Rodriguez, E.P.; Gao, X.; Ferreira, L.G. Overview of the radiometric and biophysical performance of the MODIS vegetation indices. *Remote Sens. Environ.* **2002**, *83*, 195–213. DOI: 10.1016/S0034-4257(02)00096-2.
+5. Huete, A.; Didan, K.; Miura, T.; Rodriguez, E.P.; Gao, X.; Ferreira, L.G. Overview of the radiometric and biophysical performance of the MODIS vegetation indices. *Remote Sens. Environ.* 2002, *83*, 195–213. DOI: 10.1016/S0034-4257(02)00096-2.
 
 6. Didan, K. MOD13Q1 v061: MODIS/Terra Vegetation Indices 16-Day L3 Global 250 m SIN Grid. NASA LP DAAC, 2015. DOI: 10.5067/MODIS/MOD13Q1.061.
 
-7. Muñoz-Sabater, J.; Dutra, E.; Agustí-Panareda, A.; Albergel, C.; Arduini, G.; Balsamo, G.; Boussetta, S.; Choulga, M.; Harrigan, S.; Hersbach, H.; et al. ERA5-Land: A state-of-the-art global reanalysis dataset for land applications. *Earth Syst. Sci. Data* **2021**, *13*, 4349–4383. DOI: 10.5194/essd-13-4349-2021.
+7. Muñoz-Sabater, J.; Dutra, E.; Agustí-Panareda, A.; Albergel, C.; Arduini, G.; Balsamo, G.; Boussetta, S.; Choulga, M.; Harrigan, S.; Hersbach, H.; et al. ERA5-Land: A state-of-the-art global reanalysis dataset for land applications. *Earth Syst. Sci. Data* 2021, *13*, 4349–4383. DOI: 10.5194/essd-13-4349-2021.
 
-8. Hao, Z.; Singh, V.P. Drought characterization from a multivariate perspective: A review. *J. Hydrol.* **2015**, *527*, 668–678. DOI: 10.1016/j.jhydrol.2015.05.031.
+8. Hao, Z.; Singh, V.P. Drought characterization from a multivariate perspective: A review. *J. Hydrol.* 2015, *527*, 668–678. DOI: 10.1016/j.jhydrol.2015.05.031.
 
-9. Shen, C.; Appling, A.P.; Gentine, P.; Bandai, T.; Gupta, H.; Tartakovsky, A.; Baity-Jesi, M.; Fenicia, F.; Kifer, D.; Li, L.; et al. Differentiable modelling to unify machine learning and physical models for geosciences. *Nat. Rev. Earth Environ.* **2023**, *4*, 552–567. DOI: 10.1038/s43017-023-00450-9.
+9. Shen, C.; Appling, A.P.; Gentine, P.; Bandai, T.; Gupta, H.; Tartakovsky, A.; Baity-Jesi, M.; Fenicia, F.; Kifer, D.; Li, L.; et al. Differentiable modelling to unify machine learning and physical models for geosciences. *Nat. Rev. Earth Environ.* 2023, *4*, 552–567. DOI: 10.1038/s43017-023-00450-9.
 
-10. Barnes, E.A.; Hurrell, J.W.; Ebert-Uphoff, I.; Anderson, C.; Anderson, D. Indicator patterns of forced change learned by an artificial neural network. *J. Adv. Model. Earth Syst.* **2020**, *12*, e2020MS002165. DOI: 10.1029/2020MS002165.
+10. Barnes, E.A.; Hurrell, J.W.; Ebert-Uphoff, I.; Anderson, C.; Anderson, D. Indicator patterns of forced change learned by an artificial neural network. *J. Adv. Model. Earth Syst.* 2020, *12*, e2020MS002165. DOI: 10.1029/2020MS002165.
 
-11. Gorelick, N.; Hancher, M.; Dixon, M.; Ilyushchenko, S.; Thau, D.; Moore, R. Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote Sens. Environ.* **2017**, *202*, 18–27. DOI: 10.1016/j.rse.2017.06.031.
+11. Gorelick, N.; Hancher, M.; Dixon, M.; Ilyushchenko, S.; Thau, D.; Moore, R. Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote Sens. Environ.* 2017, *202*, 18–27. DOI: 10.1016/j.rse.2017.06.031.
 
-12. Grossiord, C.; Buckley, T.N.; Cernusak, L.A.; Novick, K.A.; Poulter, B.; Siegwolf, R.T.W.; Sperry, J.S.; McDowell, N.G. Plant responses to rising vapor pressure deficit. *New Phytol.* **2020**, *226*, 1550–1566. DOI: 10.1111/nph.16485.
+12. Grossiord, C.; Buckley, T.N.; Cernusak, L.A.; Novick, K.A.; Poulter, B.; Siegwolf, R.T.W.; Sperry, J.S.; McDowell, N.G. Plant responses to rising vapor pressure deficit. *New Phytol.* 2020, *226*, 1550–1566. DOI: 10.1111/nph.16485.
 
-13. Zhou, S.; Williams, A.P.; Lintner, B.R.; Berg, A.M.; Gentine, P. Large and persistent soil carbon losses from the 2011 Texas drought. *Nat. Geosci.* **2019**, *12*, 943–949. DOI: 10.1038/s41561-019-0460-1.
+13. Zhou, S.; Williams, A.P.; Lintner, B.R.; Berg, A.M.; Gentine, P. Large and persistent soil carbon losses from the 2011 Texas drought. *Nat. Geosci.* 2019, *12*, 943–949. DOI: 10.1038/s41561-019-0460-1.
 
-14. Pastorello, G.; Trotta, C.; Canfora, E.; Chu, H.; Christianson, D.; Cheah, Y.W.; Poindexter, C.; Chen, J.; Elbashandy, A.; Humphrey, M.; et al. The FLUXNET2015 dataset and the ONEFlux processing pipeline for eddy covariance data. *Sci. Data* **2020**, *7*, 225. DOI: 10.1038/s41597-020-0534-3.
+14. Pastorello, G.; Trotta, C.; Canfora, E.; Chu, H.; Christianson, D.; Cheah, Y.W.; Poindexter, C.; Chen, J.; Elbashandy, A.; Humphrey, M.; et al. The FLUXNET2015 dataset and the ONEFlux processing pipeline for eddy covariance data. *Sci. Data* 2020, *7*, 225. DOI: 10.1038/s41597-020-0534-3.
 
 ---
 
