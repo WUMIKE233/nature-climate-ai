@@ -56,6 +56,14 @@ class ReadinessDashboard:
     def blocker_count(self) -> int:
         return sum(row.blockers for row in self.rows)
 
+    def top_blockers(self, limit: int = 5) -> tuple[DashboardRow, ...]:
+        return tuple(
+            sorted(
+                (row for row in self.rows if row.blockers > 0),
+                key=lambda row: (-row.blockers, row.component),
+            )[:limit]
+        )
+
 
 def _relative(root: Path, path: str | Path) -> Path:
     raw = Path(path)
@@ -328,6 +336,17 @@ def render_readiness_dashboard(dashboard: ReadinessDashboard, csv_path: str | Pa
     ]
     for row in dashboard.rows:
         lines.append(f"{row.component} | {row.status} | {row.blockers} | {row.summary} | {row.evidence}")
+    top_blockers = dashboard.top_blockers()
+    if top_blockers:
+        lines.extend(
+            [
+                "",
+                "## Top blockers",
+                "",
+            ]
+        )
+        for row in top_blockers:
+            lines.append(f"- {row.component}: {row.blockers} blocker(s) - {row.summary}")
     lines.extend(
         [
             "",

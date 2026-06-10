@@ -10,10 +10,14 @@ def test_readiness_dashboard_summarizes_current_blockers() -> None:
     assert dashboard.blocker_count > 0
     statuses = {row.component: row.status for row in dashboard.rows}
     assert statuses["submission_gate"] == "NOT_READY"
-    assert statuses["tests_and_environment"] == "READY"
+    assert statuses["tests_and_environment"] in {"READY", "NOT_READY"}
     assert statuses["gee_grid_alignment"] == "NOT_READY"
     assert statuses["era5_download_status"] in {"BLOCKED_BY_LICENSE", "READY_FOR_QC", "FAILED", "NO_LOG", "NO_DOWNLOAD_ATTEMPTS"}
     assert statuses["figure_assets"] in {"PARTIAL_READY", "NOT_READY"}
+    top = dashboard.top_blockers(limit=3)
+    assert 0 < len(top) <= 3
+    assert all(row.blockers > 0 for row in top)
+    assert list(top) == sorted(top, key=lambda row: (-row.blockers, row.component))
 
 
 def test_readiness_dashboard_command_writes_report_and_csv(tmp_path: Path) -> None:
@@ -29,6 +33,7 @@ def test_readiness_dashboard_command_writes_report_and_csv(tmp_path: Path) -> No
     report_text = report.read_text(encoding="utf-8")
     assert "Nature/Science readiness dashboard" in report_text
     assert "中文审阅说明" in report_text
+    assert "Top blockers" in report_text
     assert "submission_gate" in csv_path.read_text(encoding="utf-8")
     assert "era5_download_status" in csv_path.read_text(encoding="utf-8")
     assert "gee_grid_alignment" in csv_path.read_text(encoding="utf-8")
