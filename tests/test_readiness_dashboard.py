@@ -18,6 +18,9 @@ def test_readiness_dashboard_summarizes_current_blockers() -> None:
     assert 0 < len(top) <= 3
     assert all(row.blockers > 0 for row in top)
     assert list(top) == sorted(top, key=lambda row: (-row.blockers, row.component))
+    actions = dashboard.top_blocker_actions(limit=3)
+    assert len(actions) == len(top)
+    assert all(":" in action for action in actions)
 
 
 def test_readiness_dashboard_command_writes_report_and_csv(tmp_path: Path) -> None:
@@ -34,6 +37,7 @@ def test_readiness_dashboard_command_writes_report_and_csv(tmp_path: Path) -> No
     assert "Nature/Science readiness dashboard" in report_text
     assert "中文审阅说明" in report_text
     assert "Top blockers" in report_text
+    assert "Top blocker actions" in report_text
     assert "submission_gate" in csv_path.read_text(encoding="utf-8")
     assert "era5_download_status" in csv_path.read_text(encoding="utf-8")
     assert "gee_grid_alignment" in csv_path.read_text(encoding="utf-8")

@@ -109,6 +109,8 @@ python -m nature_climate_ai.cli minimum-evidence-slice --root . --output results
 python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/fluxnet_anomalies.csv --windows results/fluxnet/predicted_stress_windows.csv --output results/fluxnet/site_anomaly_metrics.csv --report results/fluxnet/validation_summary.md
 ```
 
+The readiness dashboard includes top-blocker action hints so the next maintenance step is visible beside each high-priority gate.
+
 4. Replace placeholders only after evidence exists:
    - `RESULT_REQUIRED`: requires computed and validated result.
    - `AUTHOR_REQUIRED`: requires author or institution input.
@@ -228,6 +230,8 @@ python -m nature_climate_ai.cli generate-pilot-figures --events results/stress_e
 python -m nature_climate_ai.cli minimum-evidence-slice --root . --output results/pilot/minimum_evidence_slice_report.md --csv results/pilot/minimum_evidence_slice_status.csv
 python -m nature_climate_ai.cli fluxnet-validation --fluxnet data/processed/fluxnet_anomalies.csv --windows results/fluxnet/predicted_stress_windows.csv --output results/fluxnet/site_anomaly_metrics.csv --report results/fluxnet/validation_summary.md
 ```
+
+readiness dashboard 会输出主要阻塞的下一步动作提示，便于维护时按优先级推进。
 
 4. 只有在证据产生后才替换占位符：
    - `RESULT_REQUIRED`：需要已经计算并验证的结果。

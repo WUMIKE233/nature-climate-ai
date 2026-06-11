@@ -64,6 +64,31 @@ class ReadinessDashboard:
             )[:limit]
         )
 
+    def top_blocker_actions(self, limit: int = 5) -> tuple[str, ...]:
+        return tuple(_action_hint(row) for row in self.top_blockers(limit=limit))
+
+
+ACTION_HINTS = {
+    "data_access": "confirm source access or record the blocking licence/account step",
+    "data_access_templates": "complete the missing request templates before claiming data availability",
+    "era5_download_status": "resolve CDS licence/download failures, then refresh checksum and QC reports",
+    "gee_grid_alignment": "rerun the shared-grid audit after MODIS/ERA5 export updates",
+    "evidence_registry": "complete or explicitly defer pending evidence claims",
+    "evidence_artifacts": "generate missing artifacts and replace placeholder files with real outputs",
+    "figure_assets": "generate result figures from validated analysis artifacts",
+    "manuscript_format": "fix manuscript format issues before journal-specific export",
+    "submission_package": "replace placeholders and regenerate the package audit",
+    "references": "fill missing reference metadata and literature-gap notes",
+    "author_metadata": "collect author approvals, funding, competing-interest and contribution fields",
+    "public_release": "finish public-release checks before tagging or archiving",
+    "submission_gate": "clear unresolved evidence and manuscript gate reasons before submission",
+}
+
+
+def _action_hint(row: DashboardRow) -> str:
+    hint = ACTION_HINTS.get(row.component, "review this component's evidence and refresh its audit command")
+    return f"{row.component}: {hint}"
+
 
 def _relative(root: Path, path: str | Path) -> Path:
     raw = Path(path)
@@ -347,6 +372,15 @@ def render_readiness_dashboard(dashboard: ReadinessDashboard, csv_path: str | Pa
         )
         for row in top_blockers:
             lines.append(f"- {row.component}: {row.blockers} blocker(s) - {row.summary}")
+        lines.extend(
+            [
+                "",
+                "## Top blocker actions",
+                "",
+            ]
+        )
+        for action in dashboard.top_blocker_actions():
+            lines.append(f"- {action}")
     lines.extend(
         [
             "",
